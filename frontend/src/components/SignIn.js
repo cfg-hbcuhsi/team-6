@@ -4,14 +4,12 @@ import Input from '@material-ui/core/Input';
 import InputLabel from '@material-ui/core/InputLabel';
 import InputAdornment from '@material-ui/core/InputAdornment';
 import FormControl from '@material-ui/core/FormControl';
-import TextField from '@material-ui/core/TextField';
-import Grid from '@material-ui/core/Grid';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import Paper from "@material-ui/core/Paper";
-import FormLabel from "@material-ui/core/FormLabel";
 import RadioGroup from "@material-ui/core/RadioGroup";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Radio from "@material-ui/core/Radio";
+import EmailIcon from '@material-ui/icons/Email';
 
 const useStyles = makeStyles((theme) => ({
     margin: {
@@ -41,6 +39,19 @@ export default function InputWithIcon() {
                             startAdornment={
                                 <InputAdornment position="start">
                                     <AccountCircle/>
+                                </InputAdornment>
+                            }
+                        />
+                    </FormControl>
+                </div>
+                <div>
+                    <FormControl className={classes.margin}>
+                        <InputLabel>Email</InputLabel>
+                        <Input
+                            id="input-with-icon-adornment"
+                            startAdornment={
+                                <InputAdornment position="start">
+                                    <EmailIcon/>
                                 </InputAdornment>
                             }
                         />
