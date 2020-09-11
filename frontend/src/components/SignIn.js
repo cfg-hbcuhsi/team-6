@@ -30,7 +30,7 @@ export default function InputWithIcon() {
 
     return (
         <div>
-            <Paper style={{padding: 10, width: 400}}>
+            <Paper style={{padding: 10, width: 300}}>
                 <div>
                     <FormControl className={classes.margin}>
                         <InputLabel>Name</InputLabel>
