@@ -13,8 +13,7 @@ export default makeStyles({
     borderRadius: 10,
     color: 'white',
     position: 'relative',
-    backgroundColor: 'red'
-
+    backgroundColor: 'red',
   
   },
   infoCard: {
@@ -56,7 +55,7 @@ export default makeStyles({
   },
   years: {
     fontSize: '60px'
-  }
+  },
 
   
 });
