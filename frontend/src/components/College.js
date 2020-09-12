@@ -13,12 +13,15 @@ export default () => {
 
     return (
         <div className={classes.appbar} style={{background: "white",height:1200}}>
+
             <AppBar position="relative">
                 <Toolbar>
                     <img src='https://i.imgur.com/xTtRCf4.png' className={classes.easypicmini}/>
                 </Toolbar>
             </AppBar>
             <Container maxWidth={"md"} style={{marginTop: 20}}>
+                <Typography variant={"h3"} color={"textPrimary"}>Is College Worth it?</Typography>
+
                 <Typography variant={"h6"} color={"textPrimary"}>
                     Preparing for college as a high school student can be a daunting task. So we've provided data on
                     college and scholarships to help you make the best decision.
@@ -26,6 +29,9 @@ export default () => {
                 <br/>
                 <Chart/>
                 <br/>
+
+                <Typography variant={"h3"} color={"textPrimary"}>Paying for College</Typography>
+
 
                 <Typography variant={"h6"} color={"textPrimary"}>
                     The cost of college can vary greatly, and scholarships can reduce the burden quite a bit. To get you
@@ -38,6 +44,13 @@ export default () => {
                         href="https://www.unigo.com/scholarships/high-school-students/scholarships-for-high-school-freshman" target="_blank" rel="noopener noreferrer">
                         https://www.unigo.com/scholarships/high-school-students/scholarships-for-high-school-freshman
                     </Link></div>
+                </Typography>
+                <Typography variant={"h6"} color={"textPrimary"}>
+                    Financial aid can also help reduce the financial burden. Information to apply can be found here:
+                    <Link
+                        href="https://studentaid.gov/h/apply-for-aid/fafsa" target="_blank" rel="noopener noreferrer">
+                        https://studentaid.gov/h/apply-for-aid/fafsa
+                    </Link>.
                 </Typography>
 
             </Container>
