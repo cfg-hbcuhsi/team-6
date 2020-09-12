@@ -19,7 +19,7 @@ let arr = ['https://resize.hswstatic.com/w_1024/gif/becoming-doctor.jpg',
 'https://www.onwardhealthcare.com/uploadedImages/TravelNursing/Content/Resources/News_Features_And_More/News_Articles/male%20nurse.png?n=4339', 
 ]
 
-let salary = [120000, 81000, 45000]
+let salary = [90000, 81000, 45000]
 let majors = ['Physician', 'Dentist', 'Nurse Practitioner']
 let employmentGrowth = [7, 7, 26]
 let yearsToCompleteSchool = ['7-10', 4, '2-4']
