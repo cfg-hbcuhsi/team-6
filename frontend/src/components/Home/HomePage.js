@@ -46,8 +46,8 @@ const HomePage = () => {
         <AppBar position="relative" >
         <Toolbar>
         <img src='https://i.imgur.com/xTtRCf4.png' className={classes.easypicmini}/>
-          <Button variant="text" onClick={() => setOpen(true)}>
-            Sign Up
+          <Button style={{textTransform: "none"}} variant="text" color="inherit" onClick={() => setOpen(true)}>
+            <Typography >Sign Up</Typography>
           </Button>
           <SignUp open={open} handleClose={() => setOpen(false)}/>
         </Toolbar>
