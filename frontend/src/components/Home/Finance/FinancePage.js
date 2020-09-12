@@ -14,7 +14,7 @@ const infoCards = [
   { color: '#6495ED', title: 'Financial Analyst', info: '', tSext: '', idx: 2},
 ];
 
-let arr = ['https://www.roberthalf.com/sites/default/files/2019-04/Become-an-Accountant-FA-05-01-2019.jpg', 
+let arr = ['https://cdn.corporatefinanceinstitute.com/assets/accounting-transactions.jpeg', 
 'https://www.alpinme.com/files/career-consultant-1.jpg', 
 'https://hiring-assets.careerbuilder.com/media/attachments/careerbuilder-original-3584.jpg?1511806686', 
 ]
@@ -46,7 +46,7 @@ const CardDetails = () => {
                 </Typography>
                 <CardMedia className={classes.pic} image={arr[infoCard.idx]}/>
 
-                <Typography> Major:<br /> <i>{infoCard.text}</i></Typography>
+                <Typography> Career:<br /> <i>{infoCard.text}</i></Typography>
                   <Typography className= {classes.majors}>{majors[infoCard.idx]}</Typography>
 
                 <Typography variant="h7" component="h7"> Median Salary: <br /> <i>{infoCard.text}</i></Typography>

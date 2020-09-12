@@ -9,20 +9,20 @@ import Box from '@material-ui/core/Box';
 import { shadows } from '@material-ui/system';
 
 const infoCards = [
-  { color: '#00838f', title: 'Civil Engineer', text: '', idx: 0 },
-  { color: '#1565c0', title: 'Electrical Engineer', info: '', text: '', idx: 1 },
-  { color: '#6495ED', title: 'Mechanical Engineer', info: '', text: '', idx: 2},
+  { color: '#00838f', title: 'Teacher', text: '', idx: 0 },
+  { color: '#1565c0', title: 'Guidance Counselor', info: '', text: '', idx: 1 },
+  { color: '#6495ED', title: 'Financial Analyst', info: '', tSext: '', idx: 2},
 ];
 
-let arr = ['https://www.mtu.edu/online/degrees/graduate/civil-engineering/images/online-civil-engineering-banner1600.jpg', 
-'https://inteng-storage.s3.amazonaws.com/images/sizes/electrical_engineering_salary_highest_md.jpg', 
-'https://inteng-storage.s3.amazonaws.com/img/iea/zDOZE552wk/sizes/mechanical-engineering_resize_md.jpg', 
+let arr = ['https://www.pennlive.com/resizer/a40Y2ixSU7xvyJ73sBpgnEN7Vcw=/450x0/smart/cloudfront-us-east-1.images.arcpublishing.com/advancelocal/SOM52536QRCOVFL5GSUGU3OW5Y.jpg', 
+'https://media.istockphoto.com/photos/male-college-student-meeting-with-campus-counselor-discussing-mental-picture-id1218975578?k=6&m=1218975578&s=612x612&w=0&h=2cHqXQ6QNYw6mCH8UBfXdk_0He53kfFnVX-jun3-zbA=', 
+'https://coachad.com/wp-content/uploads/hinsdale-coach-group-550x306.jpg', 
 ]
 
-let salary = [58000, 66000, 63000]
-let majors = ['Civil Engineering', 'Electrical Engineering', 'Mechanical Engineering']
-let employmentGrowth = [2, 3, 4]
-let yearsToCompleteSchool = [4, 4, 4]
+let salary = [37000, 41000, 34000]
+let majors = ['Teacher', 'Guidance Counselor', 'Sports Coach']
+let employmentGrowth = [4, 8, 12]
+let yearsToCompleteSchool = [4, 6, 4]
 
 const CardDetails = () => {
   const classes = useStyles();
@@ -75,6 +75,5 @@ const CardDetails = () => {
     </Grow>
   );
 }
-
 
 export default CardDetails;
