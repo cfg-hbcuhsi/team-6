@@ -10,7 +10,7 @@ import RadioGroup from "@material-ui/core/RadioGroup";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Radio from "@material-ui/core/Radio";
 import axios from 'axios'
-import {Redirect} from 'react-router';
+import { Redirect } from 'react-router';
 
 
 class SignUp extends Component {
@@ -23,8 +23,8 @@ class SignUp extends Component {
             email: "",
             password: "",
             role: "",
-            authFlag:false,
-            error:''
+            authFlag: false,
+            error: ''
         };
     }
 
@@ -39,50 +39,48 @@ class SignUp extends Component {
         e.preventDefault();
         console.log(this.state)
 
-        const { firstname, lastname,  email, password,role } = this.state;
+        const { firstname, lastname, email, password, role } = this.state;
         const formInfo = {
-            firstname, lastname,  email, password,role
+            firstname, lastname, email, password, role
         };
 
         axios
             .post('http://localhost:3001/signup', formInfo)
             .then((response) => {
 
-                console.log('Status code: ',response.status)
-                if(response.status == 200)
-                {
-                    if(response.data == "Success")
-                    {
+                console.log('Status code: ', response.status)
+                if (response.status == 200) {
+                    if (response.data == "Success") {
                         this.setState({
-                            authFlag:true
+                            authFlag: true
                         })
                     }
-                    else{
+                    else {
                         alert("Email ID already exists. Please try with new email Id.")
-                    }  
+                    }
                 }
-                else{
+                else {
                     this.setState({
-                        authFlag:false,
-                        error:'Please try again'
+                        authFlag: false,
+                        error: 'Please try again'
                     })
                     console.log(this.state.error)
-                }  
-            } )
+                }
+            })
             .catch(console.log);
     };
 
     render() {
-         let redirectVar = null;
-         if(this.state.authFlag){
-             redirectVar = <Redirect to= "/login"/>
-         }
-         else{
-             redirectVar = <Redirect to="/"/>
-         }
+        let redirectVar = null;
+        if (this.state.authFlag) {
+            redirectVar = <Redirect to="/login" />
+        }
+        else {
+            redirectVar = <Redirect to="/" />
+        }
         return (
             <Paper style={{ width: 300, padding: 10 }}>
-                {redirectVar}        
+                {redirectVar}
                 <Typography variant="h4" color="primary" gutterBottom>Sign Up</Typography>
                 <div className="container" style={{ width: "80%", margin: "0 auto" }}>
                     <form onSubmit={this.handleSubmit}>
@@ -150,8 +148,8 @@ class SignUp extends Component {
                         <div>
                             <FormControl component="fieldset">
                                 <RadioGroup aria-label="gender" name="role" value={this.state.role} onChange={this.handleInputChange}>
-                                    <FormControlLabel value="Mentor"  control={<Radio/>} label="I want to be a Mentor"/>
-                                    <FormControlLabel value="Mentee" control={<Radio/>} label="I want to be a Mentee"/>
+                                    <FormControlLabel value="Mentor" control={<Radio />} label="I want to be a Mentor" />
+                                    <FormControlLabel value="Mentee" control={<Radio />} label="I want to be a Mentee" />
                                 </RadioGroup>
                             </FormControl>
                         </div>
