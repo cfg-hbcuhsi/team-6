@@ -1,7 +1,6 @@
 import { makeStyles } from '@material-ui/core/styles';
 
 
-
 export default makeStyles({
   card: {
     display: 'flex', flexDirection: 'column', textAlign: 'center', width: '100%', justifyContent: 'center', position: 'relative'
@@ -19,7 +18,8 @@ export default makeStyles({
   },
   infoCard: {
     // display: 'flex', flexDirection: 'column', textAlign: 'center',
-    display: 'flex', flexDirection: 'column', textAlign: 'center', width: '100%', justifyContent: 'center', position: 'relative'
+    display: 'flex', flexDirection: 'column', textAlign: 'center', width: '100%', justifyContent: 'center', position: 'relative', 
+    
     
   },
   container: {
@@ -39,7 +39,7 @@ export default makeStyles({
     alignItems: 'left',
     justifyContent: 'top',
     bottom: '230px',
-    // left: '20px',
+     left: '25px',
     fontSize: '40px',
     color: 'whitesmoke',
     
