@@ -43,12 +43,14 @@ const NewsCards = () => {
       <div>
         <AppBar position="relative">
         <Toolbar>
+        <img src='https://i.imgur.com/xTtRCf4.png' className={classes.easypicmini}/>
           <Button component={RouterLink} to='/CardDetails'>
             Sign In.
           </Button>
         </Toolbar>
       </AppBar>
-      
+      <img src='https://i.imgur.com/xTtRCf4.png' className={classes.easypic}/>
+      <CardMedia src = 'https://i.imgur.com/4QjZKXG.png'/>
         <div className={classes.heroContent}>
             <Container maxWidth="sm">
               <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>

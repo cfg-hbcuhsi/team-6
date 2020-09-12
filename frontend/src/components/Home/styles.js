@@ -58,6 +58,14 @@ export default makeStyles({
   },
 
   heroContent: {
-    padding: 100
-  }
+    padding: '0px 0 100px 0'
+  },
+
+  easypic: {
+    height: '30vh',
+  },
+
+  easypicmini: {
+    height: '10vh'
+  },
 });
