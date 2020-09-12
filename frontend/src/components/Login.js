@@ -1,5 +1,4 @@
 import InputAdornment from '@material-ui/core/InputAdornment';
-
 import React, { Component } from 'react';
 import Paper from "@material-ui/core/Paper";
 import Button from "@material-ui/core/Button";
@@ -50,7 +49,7 @@ class Login extends Component {
                 console.log('Data: ',response.data)
                 if(response.status == 200)
                 {
-                    if(response.data.message == "Success")
+                    if(response.data == "Success")
                     {
                         console.log("Succesfull")
                         this.setState({
