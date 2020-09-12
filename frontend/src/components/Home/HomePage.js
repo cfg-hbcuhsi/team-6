@@ -60,7 +60,7 @@ const HomePage = () => {
                 A jobs first approach at career path development for students.
               </Typography>
               <Typography variant="h5" align="center" color="textSecondary" paragraph>
-                Never be affraid to reinvent yourself.
+                Never be afraid to reinvent yourself.
               </Typography>
               <div className={classes.heroButtons}>
                 <Grid container spacing={10} justify="center">

@@ -10,7 +10,7 @@ import Education from './components/Home/Education/EducationPage';
 import alanBtn from '@alan-ai/alan-sdk-web';
 
 function App() {
-  const history = useHistory();
+  let history = useHistory();
 
   return (
 
@@ -18,10 +18,8 @@ function App() {
       alanBtn({
         key: 'c42c99b8f0b40c9fd73a92f4dd3de6572e956eca572e1d8b807a3e2338fdd0dc/stage',
         onCommand: ({ command }) => {
-          if (command === 'twilight') {
-            history.push('/Medicine');
-           
-
+          if (command === 'greeting') {
+            window.location.href = '/Medicine';
           }
         },
       });
