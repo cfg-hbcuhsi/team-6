@@ -48,7 +48,8 @@ export default makeStyles({
     fontSize: '50px',
   },
   major: {
-    fontSize: '30px'
+    fontSize: '30px',
+    
   },
   growth: {
     fontSize: '50px'
