@@ -11,6 +11,7 @@ import Button from '@material-ui/core/Button';
 import useStyles from './styles.js';
 
 
+
 const infoCards = [
   { color: '#00838f', title: 'Law', text: '', idx: 0, link: '/Home' },
   { color: '#1565c0', title: 'Medicine', info: '', text: '', idx: 1, link: '/Medicine' },
