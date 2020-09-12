@@ -7,18 +7,18 @@ import { AnimationWrapper } from 'react-hover-animation';
 import CountUp from 'react-countup';
 
 const infoCards = [
-  { color: '#00838f', title: 'Software Engineer', text: '', idx: 0 },
+  { color: '#00438E', title: 'Software Engineer', text: '', idx: 0 },
   { color: '#1565c0', title: 'IT Support', info: '', text: '', idx: 1 },
   { color: '#6495ED', title: 'Data Scientist', info: '', text: '', idx: 2},
 ];
 
-let arr = ['https://resize.hswstatic.com/w_1024/gif/becoming-doctor.jpg', 
-'https://www.thebalancecareers.com/thmb/5PUQ3eYS60TpLsOdjNYmY4kxY6U=/1500x844/smart/filters:no_upscale()/nurses-discussing-over-documents-in-hospital-493216353-595690893df78c4eb647536e-5bd78e3446e0fb0051debf7f.jpg', 
-'https://d2ueix13hy5h3i.cloudfront.net/wp-content/uploads/2019/12/inteligencia-artificial-e-ciencia-de-dados-para-executivos-data-science-1140x641-1024x576.jpg', 
+let arr = ['https://www.walterpmoore.com/sites/default/files/styles/img-project-slider/public/expertise-header-image/software-header.jpg?itok=4YEsa7Vs', 
+'https://www.skyviewtek.com/wp-content/uploads/2019/08/IT-services.jpg', 
+'https://miro.medium.com/max/860/1*9onqVYdPPrCcwDX6mGKCpg.jpeg', 
 ]
 
 let salary = [80000, 45000, 78000]
-let majors = ['Computer Science', 'Information Technology', 'Computer Science']
+let majors = ['Software Engineer', 'IT Support', 'Data Scientist']
 let employmentGrowth = [22, 15, 18]
 let yearsToCompleteSchool = [4, '2 - 4', 4]
 
@@ -37,7 +37,11 @@ const CardDetails = () => {
                     {infoCard.title}
                   </Typography>
                   <CardMedia className={classes.pic} image={arr[infoCard.idx]}/>
-                  <Typography variant="h6" component="h6">Starting Salary: <br /> <i>{infoCard.text}</i></Typography>
+
+                  <Typography> Major:<br /> <i>{infoCard.text}</i></Typography>
+                    <Typography className= {classes.majors}>{majors[infoCard.idx]}</Typography>
+
+                  <Typography variant="h7" component="h7"> Median Salary: <br /> <i>{infoCard.text}</i></Typography>
                   <Typography className= {classes.sal}>
                     $<CountUp start={0} end={salary[infoCard.idx]} duration={2.75} separator={","}  />
                   </Typography>
@@ -47,8 +51,7 @@ const CardDetails = () => {
                     </Typography>
                   <Typography>Years to Complete School:<br /> <i>{infoCard.text}</i></Typography>
                     <Typography className= {classes.years}>{yearsToCompleteSchool[infoCard.idx]}</Typography>
-                    <Typography>Popular College Majors: <br /> <i>{infoCard.text}</i></Typography>
-                    <Typography className= {classes.major}>{majors[infoCard.idx]}</Typography>
+
                 </CardActionArea>
                
               </div>
