@@ -1,96 +1,75 @@
-import React, { Component } from 'react';
-import { useState, useEffect } from 'react'
-//import logo from './components/Home/';
-import './App.css';
-import Main from './components/Main'
-import { BrowserRouter,useHistory } from 'react-router-dom';
-import alanBtn from '@alan-ai/alan-sdk-web';
+import React, { useState, useEffect } from "react";
+import { Typography, Tab } from "@material-ui/core";
+import wordsToNumbers from "words-to-numbers";
+import alanBtn from "@alan-ai/alan-sdk-web";
+import CardDetails from "./New/CardDetails";
+import LawCard from "./New/LawCard";
+import NewsCards from "./components/NewsCards/NewsCards";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Link,
+  Redirect
+} from "react-router-dom";
 
+import useStyles from "./styles";
 
+const App = () => {
+  const [activeArticle, setActiveArticle] = useState(0);
+  const [newsArticles, setNewsArticles] = useState([]);
+  const [isOpen, setIsOpen] = useState(false);
 
-function App()  {
+  const classes = useStyles();
 
-  let history = useHistory();
+  useEffect(() => {
+    alanBtn({
+      key:
+        "64370f4c903e66c5b517887fefa45c1b2e956eca572e1d8b807a3e2338fdd0dc/stage",
+      onCommand: ({ command, articles, number }) => {
+        console.log("====ar", articles);
+        if (command === "newHeadlines") {
+          setNewsArticles(articles);
+          setActiveArticle(-1);
+        } else if (command === "instructions") {
+          setIsOpen(true);
+        } else if (command === "highlight") {
+          setActiveArticle(prevActiveArticle => prevActiveArticle + 1);
+        } else if (command === "open") {
+          const parsedNumber =
+            number.length > 2
+              ? wordsToNumbers(number, { fuzzy: true })
+              : number;
+          const article = articles[parsedNumber - 1];
+
+          if (parsedNumber > 20) {
+            alanBtn().playText("Please try that again...");
+          } else if (article) {
+            window.open(article.url, "_blank");
+            alanBtn().playText("Opening...");
+          } else {
+            alanBtn().playText("Please try that again...");
+          }
+        }
+      }
+    });
+  }, []);
 
   return (
-    useEffect(() => {
-      alanBtn({
-        key: 'c42c99b8f0b40c9fd73a92f4dd3de6572e956eca572e1d8b807a3e2338fdd0dc/stage',
-        onCommand: ({ command }) => {
-          if (command === 'greeting') {
-            window.location.href = '/Medicine';
-          }
-        },
-      });
-    }, []),
-
-    //Use Browser Router to route to different pages
-    <BrowserRouter>
-      <div>
-        {/* App Component Has a Child Component called Main*/}
-        <Main />
-      </div>
-    </BrowserRouter>
+    <div>
+      <Router>
+        <Route exact path="/">
+          <NewsCards articles={newsArticles} activeArticle={activeArticle} />
+        </Route>
+        <Route exact path="/Law">
+          <LawCard articles={newsArticles} activeArticle={activeArticle} />
+        </Route>
+        <Route exact path="/CardDetails">
+          <CardDetails articles={newsArticles} activeArticle={activeArticle} />
+        </Route>
+      </Router>
+    </div>
   );
+};
 
-}
-// import React, { useState, useEffect } from 'react';
-// import './App.css';
-// import { BrowserRouter as Router, Route, Switch, Link, Redirect, useHistory } from 'react-router-dom';
-// import Home from './components/Home/HomePage';
-// import Technology from './components/Home/Technology/TechnologyPage';
-// import Medicine from './components/Home/Medicine/MedicinePage';
-// import Engineering from './components/Home/Engineering/EngineeringPage';
-// import Finance from './components/Home/Finance/FinancePage';
-// import Education from './components/Home/Education/EducationPage';
-// import alanBtn from '@alan-ai/alan-sdk-web';
-
-// function App() {
-//   let history = useHistory();
-
-//   return (
-
-//     // useEffect(() => {
-//     //   alanBtn({
-//     //     key: 'c42c99b8f0b40c9fd73a92f4dd3de6572e956eca572e1d8b807a3e2338fdd0dc/stage',
-//     //     onCommand: ({ command }) => {
-//     //       if (command === 'greeting') {
-//     //         window.location.href = '/Medicine';
-//     //       }
-//     //     },
-//     //   });
-//     // }, []),
-
-
-
-
-//   //   <div className="App">
-//   //     <Router>
-//   //       <Route exact path = '/'>
-//   //         <Home/>
-//   //       </Route>
-//   //       <Route exact path = '/Medicine'>
-//   //         <Medicine/>
-//   //       </Route>
-
-//   //       <Route exact path = '/Technology'>
-//   //         <Technology/>
-//   //       </Route>
-
-//   //       <Route exact path = '/Engineering'>
-//   //         <Engineering/>
-//   //       </Route>
-
-//   //       <Route exact path = '/Finance'>
-//   //         <Finance/>
-//   //       </Route>
-
-//   //       <Route exact path = '/Education'>
-//   //         <Education/>
-//   //       </Route>
-
-//   //     </Router>
-//   //   </div>
-//    );
-// }
 export default App;
