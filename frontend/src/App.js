@@ -20,7 +20,17 @@ function App() {
         onCommand: ({ command }) => {
           if (command === 'greeting') {
             window.location.href = '/Medicine';
-          }
+          } else if (command === 'goTech') {
+            window.location.href = '/Technology';
+          } else if (command === 'goHome') {
+            window.location.href = '/';
+          } else if (command === 'goMed') {
+            window.location.href = '/Medicine';
+          } else if (command === 'goEng') {
+            window.location.href = '/Engineering  ';
+          } else if (command === 'goFinance') {
+            window.location.href = '/Finance';
+          } 
         },
       });
     }, []),
@@ -33,6 +43,7 @@ function App() {
         <Route exact path = '/'>
           <Home/>
         </Route>
+
         <Route exact path = '/Medicine'>
           <Medicine/>
         </Route>
