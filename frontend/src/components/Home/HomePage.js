@@ -17,7 +17,7 @@ const infoCards = [
   { color: '#00838f', title: 'Law', text: '', idx: 0, link: '/Home' },
   { color: '#1565c0', title: 'Medicine', info: '', text: '', idx: 1, link: '/Medicine' },
   { color: '#6495ED', title: 'Technology', info: '', text: '', idx: 2, link: '/Technology'},
-  { color: '#283593', title: 'Finance', info: '', text: '', idx: 3, link: '/CardDetails' },
+  { color: '#283593', title: 'Finance', info: '', text: '', idx: 3, link: '/Finance' },
   { color: '#00838f', title: 'Education', text: '', idx: 4, link: '/CardDetails'},
   { color: '#1565c0', title: 'Business', info: '', text: '', idx: 5, link: '/CardDetails'},
   { color: '#6495ED', title: 'Trade Work', info: '', text: '', idx: 6, link: '/CardDetails'},
@@ -39,44 +39,43 @@ let arr = ['https://cdn.britannica.com/51/190451-050-0E9B50F5/soundblock-Wood-sc
 const NewsCards = () => {
   const classes = useStyles();
 
+
+  
     return (
       <div>
         <AppBar position="relative">
         <Toolbar>
-        <img src='https://i.imgur.com/xTtRCf4.png' className={classes.easypicmini}/>
           <Button component={RouterLink} to='/CardDetails'>
             Sign In.
           </Button>
         </Toolbar>
       </AppBar>
-      <img src='https://i.imgur.com/xTtRCf4.png' className={classes.easypic}/>
-      <CardMedia src = 'https://i.imgur.com/4QjZKXG.png'/>
-        <div className={classes.heroContent}>
-            <Container maxWidth="sm">
-              <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
-                Envision A Smarter You.
-              </Typography>
-              <Typography variant="h5" align="center" color="textSecondary" paragraph>
-                A jobs first approach at career path development for college students.
-              </Typography>
-              <Typography variant="h5" align="center" color="textSecondary" paragraph>
-                Never be affraid to reinvent yourself.
-              </Typography>
-              <div className={classes.heroButtons}>
-                <Grid container spacing={2} justify="center">
-                  <Grid item>
-                    <Button variant="contained" color="primary">
-                      Main call to action
-                    </Button>
-                  </Grid>
-                  <Grid item>
-                    <Button variant="outlined" color="primary">
-                      Secondary action
-                    </Button>
-                  </Grid>
+      <div className={classes.heroContent}>
+          <Container maxWidth="sm">
+            <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
+              Envision A Smarter You.
+            </Typography>
+            <Typography variant="h5" align="center" color="textSecondary" paragraph>
+              A jobs first approach at career path development for college students.
+            </Typography>
+            <Typography variant="h5" align="center" color="textSecondary" paragraph>
+              Never be affraid to reinvent yourself.
+            </Typography>
+            <div className={classes.heroButtons}>
+              <Grid container spacing={2} justify="center">
+                <Grid item>
+                  <Button variant="contained" color="primary">
+                    Main call to action
+                  </Button>
                 </Grid>
-              </div>
-            </Container>
+                <Grid item>
+                  <Button variant="outlined" color="primary">
+                    Secondary action
+                  </Button>
+                </Grid>
+              </Grid>
+            </div>
+          </Container>
         </div>
 
 

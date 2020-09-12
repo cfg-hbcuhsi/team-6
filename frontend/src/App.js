@@ -5,6 +5,7 @@ import Home from './components/Home/HomePage';
 import Technology from './components/Home/Technology/TechnologyPage';
 import Medicine from './components/Home/Medicine/MedicinePage';
 import Engineering from './components/Home/Engineering/EngineeringPage';
+import Finance from './components/Home/Finance/FinancePage';
 
 function App() {
   return (
@@ -25,6 +26,10 @@ function App() {
           <Engineering/>
         </Route>
 
+        <Route exact path = '/Finance'>
+          <Finance/>
+        </Route>
+        
       </Router>
     </div>
   );
