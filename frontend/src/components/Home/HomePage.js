@@ -8,7 +8,7 @@ import { AnimationWrapper } from 'react-hover-animation';
 import Toolbar from '@material-ui/core/Toolbar';
 import AppBar from '@material-ui/core/AppBar';
 import Button from '@material-ui/core/Button';
-import useStyles from './styles.js';
+import makeStyles from './styles.js';
 import { Container } from 'react-layout-components';
 
 
@@ -36,15 +36,15 @@ let arr = ['https://cdn.britannica.com/51/190451-050-0E9B50F5/soundblock-Wood-sc
 
 
 
-const NewsCards = () => {
-  const classes = useStyles();
+const HomePage = () => {
+  const classes = makeStyles();
 
     return (
       <div className={classes.appbar}>
         <AppBar position="relative" >
         <Toolbar>
         <img src='https://i.imgur.com/xTtRCf4.png' className={classes.easypicmini}/>
-          <Button component={RouterLink} to='/CardDetails'>
+          <Button >
             Sign In.
           </Button>
         </Toolbar>
@@ -79,46 +79,34 @@ const NewsCards = () => {
             </Container>
         </div>
 
-
-
       <Grow in>
         <Grid className={classes.container} container alignItems="stretch" spacing={9}>
           {infoCards.map((infoCard) => (
-            <Grid item xs={12} sm={6} md={4} lg={3} className={classes.infoCard}>
+            <Grid item xs={12} sm={6} md={4} lg={3} className={classes.infoCard} key = {infoCard.title}>
               <AnimationWrapper>
-              <Typography className={classes.tex} color="inherit">
-                    
-                    {infoCard.title}
-                    
-                  </Typography>
-              <div className={classes.card} style={{ backgroundColor: infoCard.color }}>
-              <Link underline='none' component={RouterLink} to={infoCard.link}>
-                
-                <CardActionArea>
-                
-                  <CardMedia className={classes.pic} component="img" alt="contemplative reptile" height="140" image={arr[infoCard.idx]} title="contemplative reptile"/>
-            
-                  
-                </CardActionArea>
-                </Link>
-              </div>
+                <Typography className={classes.tex} color="inherit">
+                      {infoCard.title}      
+                </Typography>
+                <div className={classes.card} style={{ backgroundColor: infoCard.color }}>
+                <Link underline='none' component={RouterLink} to={infoCard.link}>
+                  <CardActionArea>
+                    <CardMedia className={classes.pic} component="img" alt="contemplative reptile" height="140" image={arr[infoCard.idx]} title="contemplative reptile"/>
+                  </CardActionArea>
+                  </Link>
+                </div>
               </AnimationWrapper>
             </Grid>
-            
           ))}
-        </Grid>
-      </Grow>
+      </Grid>
+    </Grow>
       <footer className={classes.footer}>
-      <img src='https://i.imgur.com/xTtRCf4.png' className={classes.easypicmini}/>
-      <Typography variant="subtitle1" align="center" color="white" component="p">
-        Made with 🤍 by Team 6
-      </Typography>
-    </footer>
+        <img src='https://i.imgur.com/xTtRCf4.png' className={classes.easypicmini}/>
+        <Typography className={classes.footertext} variant="subtitle1" align="center" component="p">
+          Made with 🤍 by Team 6
+        </Typography>
+      </footer>
     </div>
     );
   }
 
-  
-
-
-export default NewsCards;
+export default HomePage;
