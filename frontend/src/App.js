@@ -6,6 +6,7 @@ import Technology from './components/Home/Technology/TechnologyPage';
 import Medicine from './components/Home/Medicine/MedicinePage';
 import Engineering from './components/Home/Engineering/EngineeringPage';
 import Finance from './components/Home/Finance/FinancePage';
+import Business from './components/Home/Business/BusinessPage';
 
 function App() {
   return (
@@ -28,6 +29,10 @@ function App() {
 
         <Route exact path = '/Finance'>
           <Finance/>
+        </Route>
+
+        <Route exact path = '/Business'>
+          <Business/>
         </Route>
         
       </Router>
