@@ -39,8 +39,6 @@ let arr = ['https://cdn.britannica.com/51/190451-050-0E9B50F5/soundblock-Wood-sc
 const NewsCards = () => {
   const classes = useStyles();
 
-
-  
     return (
       <div>
         <AppBar position="relative">
@@ -50,32 +48,33 @@ const NewsCards = () => {
           </Button>
         </Toolbar>
       </AppBar>
-      <div className={classes.heroContent}>
-          <Container maxWidth="sm">
-            <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
-              Envision A Smarter You.
-            </Typography>
-            <Typography variant="h5" align="center" color="textSecondary" paragraph>
-              A jobs first approach at career path development for college students.
-            </Typography>
-            <Typography variant="h5" align="center" color="textSecondary" paragraph>
-              Never be affraid to reinvent yourself.
-            </Typography>
-            <div className={classes.heroButtons}>
-              <Grid container spacing={2} justify="center">
-                <Grid item>
-                  <Button variant="contained" color="primary">
-                    Main call to action
-                  </Button>
+      
+        <div className={classes.heroContent}>
+            <Container maxWidth="sm">
+              <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
+                Envision A Smarter You.
+              </Typography>
+              <Typography variant="h5" align="center" color="textSecondary" paragraph>
+                A jobs first approach at career path development for college students.
+              </Typography>
+              <Typography variant="h5" align="center" color="textSecondary" paragraph>
+                Never be affraid to reinvent yourself.
+              </Typography>
+              <div className={classes.heroButtons}>
+                <Grid container spacing={2} justify="center">
+                  <Grid item>
+                    <Button variant="contained" color="primary">
+                      Main call to action
+                    </Button>
+                  </Grid>
+                  <Grid item>
+                    <Button variant="outlined" color="primary">
+                      Secondary action
+                    </Button>
+                  </Grid>
                 </Grid>
-                <Grid item>
-                  <Button variant="outlined" color="primary">
-                    Secondary action
-                  </Button>
-                </Grid>
-              </Grid>
-            </div>
-          </Container>
+              </div>
+            </Container>
         </div>
 
 
