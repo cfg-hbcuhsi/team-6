@@ -46,8 +46,9 @@ export default makeStyles({
   },
   
   mainTitle: {
-    align: "center",
-    fontFamily: "cursive",
+    fontSize: '100px',
+    fontFamily: "ubuntu",
+    margin: 'auto'
   },
 
   footer: {
