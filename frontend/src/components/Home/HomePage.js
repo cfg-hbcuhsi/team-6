@@ -62,14 +62,14 @@ const NewsCards = () => {
                 Never be affraid to reinvent yourself.
               </Typography>
               <div className={classes.heroButtons}>
-                <Grid container spacing={2} justify="center">
+                <Grid container spacing={10} justify="center">
                   <Grid item>
                     <Button variant="contained" color="primary">
                       Main call to action
                     </Button>
                   </Grid>
                   <Grid item>
-                    <Button variant="outlined" color="primary">
+                    <Button variant="contained" color="secondary" textAlign = "center">
                       Secondary action
                     </Button>
                   </Grid>
