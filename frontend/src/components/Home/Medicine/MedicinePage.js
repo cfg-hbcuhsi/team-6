@@ -7,9 +7,9 @@ import { AnimationWrapper } from 'react-hover-animation';
 import CountUp from 'react-countup';
 
 const infoCards = [
-  { color: '#00838f', title: 'Software Engineer', text: '', idx: 0 },
-  { color: '#1565c0', title: 'IT Support', info: '', text: '', idx: 1 },
-  { color: '#6495ED', title: 'Data Scientist', info: '', text: '', idx: 2},
+  { color: '#7405ED', title: 'Software Engineer', text: '', idx: 0 },
+  { color: '#8425ED', title: 'IT Support', info: '', text: '', idx: 1 },
+  { color: '#5415ED', title: 'Data Scientist', info: '', text: '', idx: 2},
 ];
 
 let arr = ['https://resize.hswstatic.com/w_1024/gif/becoming-doctor.jpg', 
@@ -37,7 +37,11 @@ const CardDetails = () => {
                     {infoCard.title}
                   </Typography>
                   <CardMedia className={classes.pic} image={arr[infoCard.idx]}/>
-                  <Typography variant="h6" component="h6">Starting Salary: <br /> <i>{infoCard.text}</i></Typography>
+
+                  <Typography> Major:<br /> <i>{infoCard.text}</i></Typography>
+                    <Typography className= {classes.majors}>{majors[infoCard.idx]}</Typography>
+
+                  <Typography variant="h7" component="h7"> Median Salary: <br /> <i>{infoCard.text}</i></Typography>
                   <Typography className= {classes.sal}>
                     $<CountUp start={0} end={salary[infoCard.idx]} duration={2.75} separator={","}  />
                   </Typography>
@@ -47,8 +51,7 @@ const CardDetails = () => {
                     </Typography>
                   <Typography>Years to Complete School:<br /> <i>{infoCard.text}</i></Typography>
                     <Typography className= {classes.years}>{yearsToCompleteSchool[infoCard.idx]}</Typography>
-                    <Typography>Popular College Majors: <br /> <i>{infoCard.text}</i></Typography>
-                    <Typography className= {classes.major}>{majors[infoCard.idx]}</Typography>
+
                 </CardActionArea>
                
               </div>
