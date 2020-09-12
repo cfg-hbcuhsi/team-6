@@ -49,7 +49,7 @@ const CardDetails = () => {
                 <Typography> Career:<br /> <i>{infoCard.text}</i></Typography>
                   <Typography className= {classes.majors}>{majors[infoCard.idx]}</Typography>
 
-                <Typography variant="h7" component="h7"> Median Salary: <br /> <i>{infoCard.text}</i></Typography>
+                <Typography variant="h7" component="h7"> Entry Level Salary: <br /> <i>{infoCard.text}</i></Typography>
                 <Typography className= {classes.sal}>
                   $<CountUp start={0} end={salary[infoCard.idx]} duration={2.75} separator={","}  />
                 </Typography>
