@@ -56,7 +56,7 @@ const HomePage = () => {
       <CardMedia src = 'https://i.imgur.com/4QjZKXG.png'/>
         <div className={classes.heroContent}>
             <Container maxWidth="sm">
-              <Typography className={classes.titletext}>
+              <Typography className={classes.titletext} align="center">
                 Envision A Smarter You.
               </Typography>
               <Typography variant="h5" align="center" color="textSecondary" paragraph>
