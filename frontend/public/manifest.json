@@ -1,0 +1,15 @@
+{
+    "short_name": "Team6",
+    "name": "Team 6 Project",
+    "icons": [
+      {
+        
+        "sizes": "512x512",
+        "type": "image/x-icon"
+      }
+  ],
+    "start_url": ".",
+    "display": "standalone",
+    "theme_color": "#000000",
+    "background_color": "#ffffff"
+  }
