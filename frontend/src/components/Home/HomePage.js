@@ -53,11 +53,11 @@ const NewsCards = () => {
       <CardMedia src = 'https://i.imgur.com/4QjZKXG.png'/>
         <div className={classes.heroContent}>
             <Container maxWidth="sm">
-              <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
+              <Typography className={classes.titletext}>
                 Envision A Smarter You.
               </Typography>
               <Typography variant="h5" align="center" color="textSecondary" paragraph>
-                A jobs first approach at career path development for college students.
+                A jobs first approach at career path development for students.
               </Typography>
               <Typography variant="h5" align="center" color="textSecondary" paragraph>
                 Never be affraid to reinvent yourself.

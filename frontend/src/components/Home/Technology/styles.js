@@ -55,7 +55,13 @@ export default makeStyles({
   },
   years: {
     fontSize: '60px'
-  }
+  },
+
+  titletext: {
+    color: 'white',
+    alight: 'center',
+  },
+
 
   
 });
