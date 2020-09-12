@@ -61,6 +61,11 @@ const NewsCards = () => {
               <Typography variant="h5" align="center" color="textSecondary" paragraph>
                 Never be affraid to reinvent yourself.
               </Typography>
+
+              <footer className={classes.smallSpace}>
+
+              </footer>
+            
               <div className={classes.heroButtons}>
                 <Grid container spacing={10} justify="center">
                   <Grid item>
@@ -77,7 +82,12 @@ const NewsCards = () => {
               </div>
             </Container>
         </div>
-  
+      
+      <div>
+      <footer className={classes.footer}>
+
+      </footer>
+      </div>
   
   
       <Grow in>
