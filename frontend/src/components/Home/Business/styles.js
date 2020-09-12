@@ -32,8 +32,6 @@ export default makeStyles({
     
     
   },
-  
-
   tex: {
     
     position: 'absolute',
@@ -50,15 +48,20 @@ export default makeStyles({
     fontSize: '50px',
   },
   major: {
-    fontSize: '30px',
-    
+    fontSize: '30px'
   },
   growth: {
     fontSize: '50px'
   },
   years: {
     fontSize: '60px'
-  }
+  },
+
+  titletext: {
+    color: 'white',
+    alight: 'center',
+  },
+
 
   
 });

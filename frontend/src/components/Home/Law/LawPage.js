@@ -9,23 +9,24 @@ import Box from '@material-ui/core/Box';
 import { shadows } from '@material-ui/system';
 
 const infoCards = [
-  { color: '#00438E', title: 'Software Engineer', text: '', idx: 0 },
-  { color: '#1565c0', title: 'IT Support', info: '', text: '', idx: 1 },
-  { color: '#6495ED', title: 'Data Scientist', info: '', text: '', idx: 2},
+  { color: '#00838f', title: 'Lawyer', text: '', idx: 0 },
+  { color: '#1565c0', title: 'Judge', info: '', text: '', idx: 1 },
+  { color: '#6495ED', title: 'Political Scientist', info: '', tSext: '', idx: 2},
 ];
 
-let arr = ['https://www.walterpmoore.com/sites/default/files/styles/img-project-slider/public/expertise-header-image/software-header.jpg?itok=4YEsa7Vs', 
-'https://www.skyviewtek.com/wp-content/uploads/2019/08/IT-services.jpg', 
-'https://miro.medium.com/max/860/1*9onqVYdPPrCcwDX6mGKCpg.jpeg', 
+let arr = ['https://content.thriveglobal.com/wp-content/uploads/2019/01/Lawyer.jpeg', 
+'https://supremecourt.nebraska.gov/sites/default/files/styles/banner/public/banners/COA_formal_2018.jpg?itok=KMmWo9py', 
+'https://warontherocks.com/wp-content/uploads/2015/08/15747957678_1b9f3bfb03_k3.jpg', 
 ]
 
-let salary = [80000, 45000, 78000]
-let majors = ['Software Engineer', 'IT Support', 'Data Scientist']
-let employmentGrowth = [22, 15, 18]
-let yearsToCompleteSchool = [4, '2 - 4', 4]
+let salary = [45000, 42000, 75000]
+let majors = ['Lawyer', 'Judge', 'Political Scientist']
+let employmentGrowth = [3, 2, 6]
+let yearsToCompleteSchool = [6, 6, 6]
 
 const CardDetails = () => {
   const classes = useStyles();
+
   return (
     <Grow in>
       

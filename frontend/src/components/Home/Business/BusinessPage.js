@@ -9,23 +9,25 @@ import Box from '@material-ui/core/Box';
 import { shadows } from '@material-ui/system';
 
 const infoCards = [
-  { color: '#00438E', title: 'Software Engineer', text: '', idx: 0 },
-  { color: '#1565c0', title: 'IT Support', info: '', text: '', idx: 1 },
-  { color: '#6495ED', title: 'Data Scientist', info: '', text: '', idx: 2},
+  { color: '#2F8DFF', title: 'Management Consultant', text: '', idx: 0 },
+  { color: '#33ABF9', title: 'Operations Analyst', info: '', text: '', idx: 1 },
+  { color: '#34CCFF', title: 'Business Analyst', info: '', tSext: '', idx: 2},
 ];
 
-let arr = ['https://www.walterpmoore.com/sites/default/files/styles/img-project-slider/public/expertise-header-image/software-header.jpg?itok=4YEsa7Vs', 
-'https://www.skyviewtek.com/wp-content/uploads/2019/08/IT-services.jpg', 
-'https://miro.medium.com/max/860/1*9onqVYdPPrCcwDX6mGKCpg.jpeg', 
+let arr = ['https://www.e3businessconsultants.com/wp-content/uploads/2018/01/management-consulting-image-1.jpg', 
+'https://asuonline.asu.edu/assets/msba5.2.min_.jpg', 
+'https://fifocapital.co.nz/wp-content/uploads/2018/02/shutterstock_129444167.jpg', 
 ]
 
-let salary = [80000, 45000, 78000]
-let majors = ['Software Engineer', 'IT Support', 'Data Scientist']
-let employmentGrowth = [22, 15, 18]
-let yearsToCompleteSchool = [4, '2 - 4', 4]
+let salary = [85260, 54000, 74590]
+let majors = ['Management Consultant', 'Operations Analysit', 'Business Analyst']
+let employmentGrowth = [14, 26, 14]
+let yearsToCompleteSchool = [4, '4-6', 4]
+
 
 const CardDetails = () => {
   const classes = useStyles();
+
   return (
     <Grow in>
       
