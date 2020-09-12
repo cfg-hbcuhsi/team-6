@@ -1,19 +1,9 @@
-import {makeStyles} from '@material-ui/core/styles';
-import Input from '@material-ui/core/Input';
-import InputLabel from '@material-ui/core/InputLabel';
 import InputAdornment from '@material-ui/core/InputAdornment';
-import FormControl from '@material-ui/core/FormControl';
-import AccountCircle from '@material-ui/icons/AccountCircle';
-import RadioGroup from "@material-ui/core/RadioGroup";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
-import Radio from "@material-ui/core/Radio";
-import EmailIcon from '@material-ui/icons/Email';
 
-import React, {Component} from 'react';
-import axios from 'axios';
+import React, { Component } from 'react';
 import Paper from "@material-ui/core/Paper";
 import Button from "@material-ui/core/Button";
-import {Grid} from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 import TextField from "@material-ui/core/TextField";
 import Typography from "@material-ui/core/Typography";
 
@@ -42,7 +32,7 @@ class SignIn extends Component {
         e.preventDefault();
         console.log(this.state)
 
-        const {firstName, lastName, username, email, password} = this.state;
+        const { firstName, lastName, username, email, password } = this.state;
         const formInfo = {
             firstName, lastName, username, email, password
         };
@@ -55,10 +45,10 @@ class SignIn extends Component {
 
     render() {
         return (
-            <Paper style={{width: 300, padding: 10}}>
+            <Paper style={{ width: 300, padding: 10 }}>
 
                 <Typography variant="h4" color="primary" gutterBottom>Sign Up</Typography>
-                <div className="container" style={{width:"80%", margin:"0 auto"}}>
+                <div className="container" style={{ width: "80%", margin: "0 auto" }}>
                     <form onSubmit={this.handleSubmit}>
 
                         <TextField
@@ -129,9 +119,9 @@ class SignIn extends Component {
                         {/*    </FormControl>*/}
                         {/*</div>*/}
 
-                        <Grid container justify="center" style={{marginTop: '10px'}}>
-                            <Button variant="outlined" color="primary" style={{textTransform: "none"}}
-                                    type={"submit"}>Submit</Button>
+                        <Grid container justify="center" style={{ marginTop: '10px' }}>
+                            <Button variant="outlined" color="primary" style={{ textTransform: "none" }}
+                                type={"submit"}>Submit</Button>
                         </Grid>
                     </form>
                 </div>
