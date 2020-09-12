@@ -13,8 +13,7 @@ export default makeStyles({
     borderRadius: 10,
     color: 'white',
     position: 'relative',
-    backgroundColor: 'red'
-
+    backgroundColor: 'red',
   
   },
   infoCard: {
@@ -48,7 +47,8 @@ export default makeStyles({
     fontSize: '50px',
   },
   major: {
-    fontSize: '30px'
+    fontSize: '30px',
+    
   },
   growth: {
     fontSize: '50px'
@@ -56,12 +56,6 @@ export default makeStyles({
   years: {
     fontSize: '60px'
   },
-
-  titletext: {
-    color: 'white',
-    alight: 'center',
-  },
-
 
   
 });

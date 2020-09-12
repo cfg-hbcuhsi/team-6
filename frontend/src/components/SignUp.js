@@ -24,7 +24,8 @@ class SignUp extends Component {
             password: "",
             role: "",
             authFlag: false,
-            error: ''
+            error: '',
+            redirectFlag:false
         };
     }
 
@@ -33,6 +34,12 @@ class SignUp extends Component {
         this.setState({
             [e.target.name]: e.target.value,
         });
+    };
+
+    handleSignIn = e => {
+       this.setState({
+           redirectFlag:true
+       })
     };
 
     handleSubmit = e => {
@@ -78,6 +85,12 @@ class SignUp extends Component {
         else {
             redirectVar = <Redirect to="/" />
         }
+
+        if(this.state.redirectFlag)
+        {
+            redirectVar = <Redirect to="/login" />
+        }
+
         return (
             <Grid
                 container
@@ -165,8 +178,10 @@ class SignUp extends Component {
                                 </div>
 
                                 <Grid container justify="center" style={{ marginTop: '10px' }}>
-                                    <Button variant="outlined" color="primary" style={{ textTransform: "none" }}
+                                    <Button variant="outlined" color="primary" style={{ textTransform: "none", margin:"0 10px" }}
                                         type={"submit"}>Submit</Button>
+                                     <Button variant="outlined" onClick={this.handleSignIn} color="primary" style={{ textTransform: "none" }}
+                                        type={"submit"}>Sign In</Button>
                                 </Grid>
                             </form>
                         </div>

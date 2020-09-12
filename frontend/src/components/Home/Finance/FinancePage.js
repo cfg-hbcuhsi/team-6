@@ -9,19 +9,19 @@ import Box from '@material-ui/core/Box';
 import { shadows } from '@material-ui/system';
 
 const infoCards = [
-  { color: '#00838f', title: 'Civil Engineer', text: '', idx: 0 },
-  { color: '#1565c0', title: 'Electrical Engineer', info: '', text: '', idx: 1 },
-  { color: '#6495ED', title: 'Mechanical Engineer', info: '', text: '', idx: 2},
+  { color: '#00838f', title: 'Accountant', text: '', idx: 0 },
+  { color: '#1565c0', title: 'Consultant', info: '', text: '', idx: 1 },
+  { color: '#6495ED', title: 'Financial Analyst', info: '', tSext: '', idx: 2},
 ];
 
-let arr = ['https://www.mtu.edu/online/degrees/graduate/civil-engineering/images/online-civil-engineering-banner1600.jpg', 
-'https://inteng-storage.s3.amazonaws.com/images/sizes/electrical_engineering_salary_highest_md.jpg', 
-'https://inteng-storage.s3.amazonaws.com/img/iea/zDOZE552wk/sizes/mechanical-engineering_resize_md.jpg', 
+let arr = ['https://cdn.corporatefinanceinstitute.com/assets/accounting-transactions.jpeg', 
+'https://www.alpinme.com/files/career-consultant-1.jpg', 
+'https://hiring-assets.careerbuilder.com/media/attachments/careerbuilder-original-3584.jpg?1511806686', 
 ]
 
-let salary = [58000, 66000, 63000]
-let majors = ['Civil Engineering', 'Electrical Engineering', 'Mechanical Engineering']
-let employmentGrowth = [2, 3, 4]
+let salary = [47000, 53000, 43000]
+let majors = ['Accountant', 'Financial Consultant', 'Financial Analyst']
+let employmentGrowth = [4, 4, 5]
 let yearsToCompleteSchool = [4, 4, 4]
 
 const CardDetails = () => {
@@ -75,6 +75,5 @@ const CardDetails = () => {
     </Grow>
   );
 }
-
 
 export default CardDetails;
