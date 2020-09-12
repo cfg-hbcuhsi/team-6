@@ -9,6 +9,7 @@ import Engineering from './Home/Engineering/EngineeringPage';
 import MentorHome from './MentorHome/MentorHome';
 import { useState, useEffect } from 'react'
 import alanBtn from '@alan-ai/alan-sdk-web';
+import College from "./College";
 
 
 class Main extends Component {
@@ -24,6 +25,7 @@ class Main extends Component {
                 <Route path="/medicine" component={Medicine} />
                 <Route path="/technology" component={Technology} />
                 <Route path="/engineering" component={Engineering} />
+                <Route path="/college" component={College} />
                 <Route path="/mentorhome" component={MentorHome} />
             </div>
         )

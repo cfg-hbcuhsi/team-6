@@ -105,12 +105,6 @@ const HomePage = () => {
         <AppBar position="relative" >
         <Toolbar>
         <img src='https://i.imgur.com/xTtRCf4.png' className={classes.easypicmini}/>
-          <Button color="inherit">
-            Scholarship and Resources
-          </Button>
-          <Button color="inherit">
-            Find Mentors
-          </Button>
         </Toolbar>
       </AppBar>
       {/* <img src='https://i.imgur.com/xTtRCf4.png' className={classes.easypic}/> */}
@@ -140,6 +134,21 @@ const HomePage = () => {
                   </Grid>
                 </Grid>
               </div> */}
+
+             <div className={classes.heroButtons}>
+               <Grid container spacing={2} justify="center">
+                 <Grid item>
+                   <Button variant="contained" color="secondary" component={RouterLink} to={"/college"}>
+                     Navigate through scholarships and college
+                       </Button>
+                 </Grid>
+                 <Grid item>
+                   <Button variant="contained"  color="secondary">
+                     Find a mentor
+                       </Button>
+                 </Grid>
+               </Grid>
+             </div>
             </Container>
         </div>
       <Grow in>
