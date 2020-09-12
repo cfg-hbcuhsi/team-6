@@ -38,7 +38,7 @@ const CardDetails = () => {
                   </Typography>
                   <CardMedia className={classes.pic} image={arr[infoCard.idx]}/>
 
-                  <Typography> Major:<br /> <i>{infoCard.text}</i></Typography>
+                  <Typography> Career:<br /> <i>{infoCard.text}</i></Typography>
                     <Typography className= {classes.majors}>{majors[infoCard.idx]}</Typography>
 
                   <Typography variant="h7" component="h7"> Median Salary: <br /> <i>{infoCard.text}</i></Typography>
