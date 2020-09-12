@@ -1,5 +1,7 @@
 import { makeStyles } from '@material-ui/core/styles';
 
+
+
 export default makeStyles({
   card: {
     display: 'flex', flexDirection: 'column', textAlign: 'center', width: '100%', justifyContent: 'center', position: 'relative'
@@ -44,12 +46,26 @@ export default makeStyles({
   },
   
   mainTitle: {
-    align: "center",
+    fontSize: '100px',
+    fontFamily: "ubuntu",
+    margin: 'auto'
   },
 
   footer: {
     backgroundColor: 'dark blue',
     padding: 100,
     // background: linear-gradient('-45deg', '#ee7752', '#e73c7e', '#23a6d5', '#23d5ab'),
-  }
+  },
+
+  heroContent: {
+    padding: '0px 0 100px 0'
+  },
+
+  easypic: {
+    height: '30vh',
+  },
+
+  easypicmini: {
+    height: '10vh'
+  },
 });

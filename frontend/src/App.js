@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch, Link, Redirect } from 'react-ro
 import Home from './components/Home/HomePage';
 import Technology from './components/Home/Technology/TechnologyPage';
 import Medicine from './components/Home/Medicine/MedicinePage';
+import Engineering from './components/Home/Engineering/EngineeringPage';
 
 function App() {
   return (
@@ -15,9 +16,15 @@ function App() {
         <Route exact path = '/Medicine'>
           <Medicine/>
         </Route>
+
         <Route exact path = '/Technology'>
           <Technology/>
         </Route>
+
+        <Route exact path = '/Engineering'>
+          <Engineering/>
+        </Route>
+
       </Router>
     </div>
   );
