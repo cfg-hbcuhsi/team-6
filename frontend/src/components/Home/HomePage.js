@@ -35,91 +35,90 @@ let arr = ['https://cdn.britannica.com/51/190451-050-0E9B50F5/soundblock-Wood-sc
 ]
 
 
-
 const NewsCards = () => {
   const classes = useStyles();
-
-
   
     return (
-      <div>
-        <AppBar position="relative">
+      <div className={classes.appbar}>
+        <AppBar position="relative" >
         <Toolbar>
+        <img src='https://i.imgur.com/xTtRCf4.png' className={classes.easypicmini}/>
           <Button component={RouterLink} to='/CardDetails'>
             Sign In.
           </Button>
         </Toolbar>
       </AppBar>
-      <div className={classes.heroContent}>
-          <Container maxWidth="sm">
-            <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
-              Envision A Smarter You.
-            </Typography>
-            <Typography variant="h5" align="center" color="textSecondary" paragraph>
-              A jobs first approach at career path development for college students.
-            </Typography>
-            <Typography variant="h5" align="center" color="textSecondary" paragraph>
-              Never be affraid to reinvent yourself.
-            </Typography>
-            <div className={classes.heroButtons}>
-              <Grid container spacing={2} justify="center">
-                <Grid item>
-                  <Button variant="contained" color="primary">
-                    Main call to action
-                  </Button>
+      <img src='https://i.imgur.com/xTtRCf4.png' className={classes.easypic}/>
+      <CardMedia src = 'https://i.imgur.com/4QjZKXG.png'/>
+        <div className={classes.heroContent}>
+            <Container maxWidth="sm">
+              <Typography className={classes.titletext}>
+                Envision A Smarter You.
+              </Typography>
+              <Typography variant="h5" align="center" color="textSecondary" paragraph>
+                A jobs first approach at career path development for students.
+              </Typography>
+              <Typography variant="h5" align="center" color="textSecondary" paragraph>
+                Never be affraid to reinvent yourself.
+              </Typography>
+              <div className={classes.heroButtons}>
+                <Grid container spacing={2} justify="center">
+                  <Grid item>
+                    <Button variant="contained" color="primary">
+                      Main call to action
+                    </Button>
+                  </Grid>
+                  <Grid item>
+                    <Button variant="outlined" color="primary">
+                      Secondary action
+                    </Button>
+                  </Grid>
                 </Grid>
-                <Grid item>
-                  <Button variant="outlined" color="primary">
-                    Secondary action
-                  </Button>
-                </Grid>
-              </Grid>
-            </div>
-          </Container>
+              </div>
+            </Container>
         </div>
-
-
-
+  
+  
+  
       <Grow in>
         <Grid className={classes.container} container alignItems="stretch" spacing={9}>
           {infoCards.map((infoCard) => (
             <Grid item xs={12} sm={6} md={4} lg={3} className={classes.infoCard}>
               <AnimationWrapper>
               <Typography className={classes.tex} color="inherit">
-                    
+                   
                     {infoCard.title}
-                    
+                   
                   </Typography>
               <div className={classes.card} style={{ backgroundColor: infoCard.color }}>
               <Link underline='none' component={RouterLink} to={infoCard.link}>
-                
+               
                 <CardActionArea>
-                
+               
                   <CardMedia className={classes.pic} component="img" alt="contemplative reptile" height="140" image={arr[infoCard.idx]} title="contemplative reptile"/>
-            
-                  
+           
+                 
                 </CardActionArea>
                 </Link>
               </div>
               </AnimationWrapper>
             </Grid>
-            
+           
           ))}
         </Grid>
       </Grow>
       <footer className={classes.footer}>
-      <Typography variant="h6" align="center" gutterBottom>
-        Footer
-      </Typography>
-      <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
-        Something here to give the footer a purpose!
+      <img src='https://i.imgur.com/xTtRCf4.png' className={classes.easypicmini}/>
+      <Typography variant="subtitle1" align="center" color="white" component="p">
+        Made with 🤍 by Team 6
       </Typography>
     </footer>
     </div>
     );
   }
-
   
-
-
-export default NewsCards;
+  
+  
+ export default NewsCards;
+ 
+ 

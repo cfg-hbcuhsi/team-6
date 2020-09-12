@@ -23,7 +23,7 @@ export default makeStyles({
     
   },
   container: {
-    padding: '0 5%', width: '100%', margin: 0, padding: 100, position: 'relative'
+    padding: '0 5%', width: '100%', margin: 0, padding: '0 0 100px 0', position: 'relative'
     
   },
   pic: {
@@ -45,11 +45,11 @@ export default makeStyles({
     
   },
   
-  mainTitle: {
-    fontSize: '100px',
-    fontFamily: "ubuntu",
-    margin: 'auto'
-  },
+  // mainTitle: {
+  //   fontSize: '100px',
+  //   fontFamily: "helvetica",
+  //   margin: 'auto'
+  // },
 
   footer: {
     backgroundColor: 'dark blue',
@@ -58,7 +58,8 @@ export default makeStyles({
   },
 
   heroContent: {
-    padding: '0px 0 100px 0'
+    padding: '0px 0 40px 0',
+    
   },
 
   easypic: {
@@ -67,5 +68,13 @@ export default makeStyles({
 
   easypicmini: {
     height: '10vh'
+  },
+
+  titletext: {
+    color: 'white',
+    // alight: 'beb,as'
+    fontFamily: 'sans-serif',
+    fontSize: '100px',
+    
   },
 });
