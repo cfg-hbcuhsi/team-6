@@ -6,6 +6,10 @@ import Button from "@material-ui/core/Button";
 import { Grid } from "@material-ui/core";
 import TextField from "@material-ui/core/TextField";
 import Typography from "@material-ui/core/Typography";
+import FormControl from "@material-ui/core/FormControl";
+import RadioGroup from "@material-ui/core/RadioGroup";
+import FormControlLabel from "@material-ui/core/FormControlLabel";
+import Radio from "@material-ui/core/Radio";
 
 
 class SignIn extends Component {
@@ -15,9 +19,9 @@ class SignIn extends Component {
         this.state = {
             firstName: "",
             lastName: '',
-            username: '',
             email: "",
-            password: ""
+            password: "",
+            role: ""
         };
     }
 
@@ -32,9 +36,9 @@ class SignIn extends Component {
         e.preventDefault();
         console.log(this.state)
 
-        const { firstName, lastName, username, email, password } = this.state;
+        const { firstName, lastName,  email, password } = this.state;
         const formInfo = {
-            firstName, lastName, username, email, password
+            firstName, lastName,  email, password
         };
 
         // axios
@@ -50,35 +54,6 @@ class SignIn extends Component {
                 <Typography variant="h4" color="primary" gutterBottom>Sign Up</Typography>
                 <div className="container" style={{ width: "80%", margin: "0 auto" }}>
                     <form onSubmit={this.handleSubmit}>
-
-                        <TextField
-                            fullWidth={true}
-                            required label={"Email"}
-                            name={"email"}
-                            value={this.state.email}
-                            type={"text"}
-                            onChange={this.handleInputChange}
-                            id="input-with-icon-adornment"
-                            startAdornment={
-                                <InputAdornment position="start">
-                                </InputAdornment>
-                            }
-                        />
-
-                        <TextField
-                            fullWidth={true}
-                            required
-                            label={"Password"}
-                            name={"password"}
-                            value={this.state.password}
-                            type={"password"}
-                            onChange={this.handleInputChange}
-                            id="input-with-icon-adornment"
-                            startAdornment={
-                                <InputAdornment position="start">
-                                </InputAdornment>
-                            }
-                        />
 
                         <TextField
                             fullWidth={true}
@@ -110,14 +85,44 @@ class SignIn extends Component {
                         />
 
 
-                        {/*<div>*/}
-                        {/*    <FormControl component="fieldset">*/}
-                        {/*        <RadioGroup aria-label="gender" name="gender1" value={value} onChange={this.handleInputChange}>*/}
-                        {/*            <FormControlLabel value="mentor" control={<Radio/>} label="I want to be a Mentor"/>*/}
-                        {/*            <FormControlLabel value="mentee" control={<Radio/>} label="I want to be a Mentee"/>*/}
-                        {/*        </RadioGroup>*/}
-                        {/*    </FormControl>*/}
-                        {/*</div>*/}
+                        <TextField
+                            fullWidth={true}
+                            required label={"Email"}
+                            name={"email"}
+                            value={this.state.email}
+                            type={"text"}
+                            onChange={this.handleInputChange}
+                            id="input-with-icon-adornment"
+                            startAdornment={
+                                <InputAdornment position="start">
+                                </InputAdornment>
+                            }
+                        />
+
+                        <TextField
+                            fullWidth={true}
+                            required
+                            label={"Password"}
+                            name={"password"}
+                            value={this.state.password}
+                            type={"password"}
+                            onChange={this.handleInputChange}
+                            id="input-with-icon-adornment"
+                            startAdornment={
+                                <InputAdornment position="start">
+                                </InputAdornment>
+                            }
+                        />
+
+
+                        <div>
+                            <FormControl component="fieldset">
+                                <RadioGroup aria-label="gender" name="role" value={this.state.role} onChange={this.handleInputChange}>
+                                    <FormControlLabel value="Mentor" control={<Radio/>} label="I want to be a Mentor"/>
+                                    <FormControlLabel value="Mentee" control={<Radio/>} label="I want to be a Mentee"/>
+                                </RadioGroup>
+                            </FormControl>
+                        </div>
 
                         <Grid container justify="center" style={{ marginTop: '10px' }}>
                             <Button variant="outlined" color="primary" style={{ textTransform: "none" }}
