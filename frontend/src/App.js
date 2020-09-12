@@ -27,7 +27,7 @@ function App() {
           } else if (command === 'goMed') {
             window.location.href = '/Medicine';
           } else if (command === 'goEng') {
-            window.location.href = '/Engineering  ';
+            window.location.href = '/Engineering';
           } else if (command === 'goFinance') {
             window.location.href = '/Finance';
           } 
