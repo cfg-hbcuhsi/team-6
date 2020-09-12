@@ -15,7 +15,7 @@ const infoCards = [
 ];
 
 let arr = ['https://cdn.corporatefinanceinstitute.com/assets/accounting-transactions.jpeg', 
-'https://www.alpinme.com/files/career-consultant-1.jpg', 
+'https://fa.com.sg/wp-content/uploads/2018/06/financial-cover.jpg', 
 'https://hiring-assets.careerbuilder.com/media/attachments/careerbuilder-original-3584.jpg?1511806686', 
 ]
 
