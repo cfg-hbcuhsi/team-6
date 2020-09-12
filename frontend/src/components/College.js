@@ -25,6 +25,7 @@ export default () => {
                 </Typography>
                 <br/>
                 <Chart/>
+                <br/>
 
                 <Typography variant={"h6"} color={"textPrimary"}>
                     The cost of college can vary greatly, and scholarships can reduce the burden quite a bit. To get you

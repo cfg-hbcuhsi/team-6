@@ -138,12 +138,12 @@ const HomePage = () => {
              <div className={classes.heroButtons}>
                <Grid container spacing={2} justify="center">
                  <Grid item>
-                   <Button variant="contained" color="secondary" component={RouterLink} to={"/college"}>
-                     Navigate through scholarships and college
+                   <Button variant="contained" color="primary" component={RouterLink} to={"/college"}>
+                     scholarships and college
                        </Button>
                  </Grid>
                  <Grid item>
-                   <Button variant="contained"  color="secondary">
+                   <Button variant="contained"  color="secondary" component={RouterLink} to={"/mentor"}>
                      Find a mentor
                        </Button>
                  </Grid>
