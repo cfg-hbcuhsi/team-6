@@ -77,4 +77,8 @@ export default makeStyles({
     fontSize: '100px',
     
   },
+
+  appbar: {
+    color: 'white'
+  }
 });

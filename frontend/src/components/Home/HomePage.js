@@ -40,8 +40,8 @@ const NewsCards = () => {
   const classes = useStyles();
 
     return (
-      <div>
-        <AppBar position="relative">
+      <div className={classes.appbar}>
+        <AppBar position="relative" >
         <Toolbar>
         <img src='https://i.imgur.com/xTtRCf4.png' className={classes.easypicmini}/>
           <Button component={RouterLink} to='/CardDetails'>
@@ -109,11 +109,9 @@ const NewsCards = () => {
         </Grid>
       </Grow>
       <footer className={classes.footer}>
-      <Typography variant="h6" align="center" gutterBottom>
-        Footer
-      </Typography>
-      <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
-        Something here to give the footer a purpose!
+      <img src='https://i.imgur.com/xTtRCf4.png' className={classes.easypicmini}/>
+      <Typography variant="subtitle1" align="center" color="white" component="p">
+        Made with 🤍 by Team 6
       </Typography>
     </footer>
     </div>
