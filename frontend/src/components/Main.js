@@ -13,13 +13,12 @@ class Main extends Component {
         return(
             <div>
                 {/*Render Different Component based on Route*/}
-                <Route path="/" exact={true} component={SignUp}/>                    
+                <Route path="/" exact={true} component={Home}/>
+                <Route path="/signup" component={SignUp}/>
                 <Route path="/login" component={Login}/>                    
-                <Route path="/home" component={Home}/>                    
-                <Route path="/medicine" component={Medicine}/>                    
+                <Route path="/medicine" component={Medicine}/>
                 <Route path="/technology" component={Technology}/>                    
-                <Route path="/engineering" component={Engineering}/>                    
-                
+                <Route path="/engineering" component={Engineering}/>
             </div>
         )
     }
