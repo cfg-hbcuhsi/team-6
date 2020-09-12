@@ -11,9 +11,6 @@ import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Radio from "@material-ui/core/Radio";
 import axios from 'axios'
 import { Redirect } from 'react-router';
-import Dialog from "@material-ui/core/Dialog";
-import DialogTitle from "@material-ui/core/DialogTitle";
-import DialogActions from "@material-ui/core/DialogActions";
 
 
 class SignUp extends Component {
@@ -27,7 +24,8 @@ class SignUp extends Component {
             password: "",
             role: "",
             authFlag: false,
-            error: ''
+            error: '',
+            redirectFlag:false
         };
     }
 
@@ -36,6 +34,12 @@ class SignUp extends Component {
         this.setState({
             [e.target.name]: e.target.value,
         });
+    };
+
+    handleSignIn = e => {
+       this.setState({
+           redirectFlag:true
+       })
     };
 
     handleSubmit = e => {
@@ -81,96 +85,111 @@ class SignUp extends Component {
         else {
             redirectVar = <Redirect to="/" />
         }
+
+        if(this.state.redirectFlag)
+        {
+            redirectVar = <Redirect to="/login" />
+        }
+
         return (
-            <Dialog open={this.props.open} onClose={this.props.handleClose} style={{padding:20}} aria-labelledby="form-dialog-title">
-            {redirectVar}
-                <DialogTitle
-                    disableTypography
-                    id="alert-dialog-title"
-                >
-                    <Typography variant="h4" color="primary">Sign Up</Typography>
+            <Grid
+                container
+                spacing={0}
+                direction="column"
+                alignItems="center"
+                justify="center"
+                style={{ minHeight: '70vh' }}
+            >
 
-                </DialogTitle>
-                <div className="container" style={{ width: "80%", margin: "0 auto" }}>
-                        <TextField
-                            fullWidth={true}
-                            required
-                            label={"First Name"}
-                            name={"firstname"}
-                            value={this.state.firstname}
-                            type={"text"}
-                            onChange={this.handleInputChange}
-                            id="input-with-icon-adornment"
-                            startAdornment={
-                                <InputAdornment position="start">
-                                </InputAdornment>
-                            }
-                        />
-                        <TextField
-                            fullWidth={true}
-                            required
-                            label={"Last Name"}
-                            name={"lastname"}
-                            value={this.state.lastname}
-                            type={"text"}
-                            onChange={this.handleInputChange}
-                            id="input-with-icon-adornment"
-                            startAdornment={
-                                <InputAdornment position="start">
-                                </InputAdornment>
-                            }
-                        />
+                <Grid item xs={3}>
+                    <Paper style={{ width: 300, padding: 10 }}>
+                        {redirectVar}
+                        <Typography variant="h4" align="center" color="primary" gutterBottom>Sign Up</Typography>
+                        <div className="container" style={{ width: "80%", margin: "0 auto" }}>
+                            <form onSubmit={this.handleSubmit}>
 
-
-                        <TextField
-                            fullWidth={true}
-                            required label={"Email"}
-                            name={"email"}
-                            value={this.state.email}
-                            type={"text"}
-                            onChange={this.handleInputChange}
-                            id="input-with-icon-adornment"
-                            startAdornment={
-                                <InputAdornment position="start">
-                                </InputAdornment>
-                            }
-                        />
-
-                        <TextField
-                            fullWidth={true}
-                            required
-                            label={"Password"}
-                            name={"password"}
-                            value={this.state.password}
-                            type={"password"}
-                            onChange={this.handleInputChange}
-                            id="input-with-icon-adornment"
-                            startAdornment={
-                                <InputAdornment position="start">
-                                </InputAdornment>
-                            }
-                        />
+                                <TextField
+                                    fullWidth={true}
+                                    required
+                                    label={"First Name"}
+                                    name={"firstname"}
+                                    value={this.state.firstname}
+                                    type={"text"}
+                                    onChange={this.handleInputChange}
+                                    id="input-with-icon-adornment"
+                                    startAdornment={
+                                        <InputAdornment position="start">
+                                        </InputAdornment>
+                                    }
+                                />
+                                <TextField
+                                    fullWidth={true}
+                                    required
+                                    label={"Last Name"}
+                                    name={"lastname"}
+                                    value={this.state.lastname}
+                                    type={"text"}
+                                    onChange={this.handleInputChange}
+                                    id="input-with-icon-adornment"
+                                    startAdornment={
+                                        <InputAdornment position="start">
+                                        </InputAdornment>
+                                    }
+                                />
 
 
-                        <div>
-                            <FormControl component="fieldset">
-                                <RadioGroup aria-label="gender" name="role" value={this.state.role} onChange={this.handleInputChange}>
-                                    <FormControlLabel value="Mentor" control={<Radio />} label="I want to be a Mentor" />
-                                    <FormControlLabel value="Mentee" control={<Radio />} label="I want to be a Mentee" />
-                                </RadioGroup>
-                            </FormControl>
+                                <TextField
+                                    fullWidth={true}
+                                    required label={"Email"}
+                                    name={"email"}
+                                    value={this.state.email}
+                                    type={"text"}
+                                    onChange={this.handleInputChange}
+                                    id="input-with-icon-adornment"
+                                    startAdornment={
+                                        <InputAdornment position="start">
+                                        </InputAdornment>
+                                    }
+                                />
+
+                                <TextField
+                                    fullWidth={true}
+                                    required
+                                    label={"Password"}
+                                    name={"password"}
+                                    value={this.state.password}
+                                    type={"password"}
+                                    onChange={this.handleInputChange}
+                                    id="input-with-icon-adornment"
+                                    startAdornment={
+                                        <InputAdornment position="start">
+                                        </InputAdornment>
+                                    }
+                                />
+
+
+                                <div>
+                                    <FormControl component="fieldset">
+                                        <RadioGroup aria-label="gender" name="role" value={this.state.role} onChange={this.handleInputChange}>
+                                            <FormControlLabel value="Mentor" control={<Radio />} label="I want to be a Mentor" />
+                                            <FormControlLabel value="Mentee" control={<Radio />} label="I want to be a Mentee" />
+                                        </RadioGroup>
+                                    </FormControl>
+                                </div>
+
+                                <Grid container justify="center" style={{ marginTop: '10px' }}>
+                                    <Button variant="outlined" color="primary" style={{ textTransform: "none", margin:"0 10px" }}
+                                        type={"submit"}>Submit</Button>
+                                     <Button variant="outlined" onClick={this.handleSignIn} color="primary" style={{ textTransform: "none" }}
+                                        type={"submit"}>Sign In</Button>
+                                </Grid>
+                            </form>
                         </div>
+                    </Paper>
+                </Grid>
 
-                            <DialogActions>
-                                <Button onClick={this.props.handleClose} color="primary">
-                                    Cancel
-                                </Button>
-                                <Button onClick={this.handleSubmit} color="primary" type={"submit"}>
-                                    Submit
-                                </Button>
-                            </DialogActions>
-                </div>
-            </Dialog>
+            </Grid>
+
         );
     }
 }
