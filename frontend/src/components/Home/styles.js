@@ -85,5 +85,9 @@ export default makeStyles({
 
   appbar: {
     color: 'white'
+  },
+  
+  footertext: {
+    color: 'white'
   }
 });
