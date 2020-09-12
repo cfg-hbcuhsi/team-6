@@ -15,6 +15,7 @@ import Paper from "@material-ui/core/Paper";
 import Button from "@material-ui/core/Button";
 import {Grid} from "@material-ui/core";
 import TextField from "@material-ui/core/TextField";
+import Typography from "@material-ui/core/Typography";
 
 
 class SignIn extends Component {
@@ -54,12 +55,14 @@ class SignIn extends Component {
 
     render() {
         return (
-            <Paper style={{width: 250, padding: 10}}>
-                <br/>
-                <div className="container">
+            <Paper style={{width: 300, padding: 10}}>
+
+                <Typography variant="h4" color="primary" gutterBottom>Sign Up</Typography>
+                <div className="container" style={{width:"80%", margin:"0 auto"}}>
                     <form onSubmit={this.handleSubmit}>
 
                         <TextField
+                            fullWidth={true}
                             required label={"Email"}
                             name={"email"}
                             value={this.state.email}
@@ -73,11 +76,12 @@ class SignIn extends Component {
                         />
 
                         <TextField
+                            fullWidth={true}
                             required
                             label={"Password"}
                             name={"password"}
                             value={this.state.password}
-                            type={"text"}
+                            type={"password"}
                             onChange={this.handleInputChange}
                             id="input-with-icon-adornment"
                             startAdornment={
@@ -87,6 +91,7 @@ class SignIn extends Component {
                         />
 
                         <TextField
+                            fullWidth={true}
                             required
                             label={"First Name"}
                             name={"firstName"}
@@ -100,6 +105,7 @@ class SignIn extends Component {
                             }
                         />
                         <TextField
+                            fullWidth={true}
                             required
                             label={"Last Name"}
                             name={"lastName"}
@@ -125,7 +131,7 @@ class SignIn extends Component {
 
                         <Grid container justify="center" style={{marginTop: '10px'}}>
                             <Button variant="outlined" color="primary" style={{textTransform: "none"}}
-                                    type={"submit"}>Sign Up</Button>
+                                    type={"submit"}>Submit</Button>
                         </Grid>
                     </form>
                 </div>
