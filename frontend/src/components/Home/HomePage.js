@@ -40,8 +40,8 @@ const NewsCards = () => {
   const classes = useStyles();
 
     return (
-      <div>
-        <AppBar position="relative">
+      <div className={classes.appbar}>
+        <AppBar position="relative" >
         <Toolbar>
         <img src='https://i.imgur.com/xTtRCf4.png' className={classes.easypicmini}/>
           <Button component={RouterLink} to='/CardDetails'>
@@ -53,11 +53,11 @@ const NewsCards = () => {
       <CardMedia src = 'https://i.imgur.com/4QjZKXG.png'/>
         <div className={classes.heroContent}>
             <Container maxWidth="sm">
-              <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
+              <Typography className={classes.titletext}>
                 Envision A Smarter You.
               </Typography>
               <Typography variant="h5" align="center" color="textSecondary" paragraph>
-                A jobs first approach at career path development for college students.
+                A jobs first approach at career path development for students.
               </Typography>
               <Typography variant="h5" align="center" color="textSecondary" paragraph>
                 Never be affraid to reinvent yourself.
@@ -109,11 +109,9 @@ const NewsCards = () => {
         </Grid>
       </Grow>
       <footer className={classes.footer}>
-      <Typography variant="h6" align="center" gutterBottom>
-        Footer
-      </Typography>
-      <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
-        Something here to give the footer a purpose!
+      <img src='https://i.imgur.com/xTtRCf4.png' className={classes.easypicmini}/>
+      <Typography variant="subtitle1" align="center" color="white" component="p">
+        Made with 🤍 by Team 6
       </Typography>
     </footer>
     </div>
