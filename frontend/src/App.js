@@ -17,11 +17,36 @@ function App() {
 
   return (
 
+    useEffect(() => {
+      alanBtn({
+        key: 'c42c99b8f0b40c9fd73a92f4dd3de6572e956eca572e1d8b807a3e2338fdd0dc/stage',
+        onCommand: ({ command }) => {
+          if (command === 'greeting') {
+            window.location.href = '/Medicine';
+          } else if (command === 'goTech') {
+            window.location.href = '/Technology';
+          } else if (command === 'goHome') {
+            window.location.href = '/';
+          } else if (command === 'goMed') {
+            window.location.href = '/Medicine';
+          } else if (command === 'goEng') {
+            window.location.href = '/Engineering';
+          } else if (command === 'goFinance') {
+            window.location.href = '/Finance';
+          } 
+        },
+      });
+    }, []),
+
+
+
+
     <div className="App">
       <Router>
         <Route exact path = '/'>
           <Home/>
         </Route>
+
         <Route exact path = '/Medicine'>
           <Medicine/>
         </Route>
