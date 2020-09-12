@@ -5,13 +5,10 @@ import Home from './components/Home/HomePage';
 import Technology from './components/Home/Technology/TechnologyPage';
 import Medicine from './components/Home/Medicine/MedicinePage';
 import Engineering from './components/Home/Engineering/EngineeringPage';
-<<<<<<< HEAD
-import alanBtn from '@alan-ai/alan-sdk-web';
-=======
 import Finance from './components/Home/Finance/FinancePage';
 import Education from './components/Home/Education/EducationPage';
+import alanBtn from '@alan-ai/alan-sdk-web';
 
->>>>>>> dde299def1af9942c8a940a07b01a36ba87a6c19
 function App() {
   const history = useHistory();
 
