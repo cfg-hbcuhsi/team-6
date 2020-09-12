@@ -17,8 +17,8 @@ const infoCards = [
   { color: '#00838f', title: 'Law', text: '', idx: 0, link: '/Home' },
   { color: '#1565c0', title: 'Medicine', info: '', text: '', idx: 1, link: '/Medicine' },
   { color: '#6495ED', title: 'Technology', info: '', text: '', idx: 2, link: '/Technology'},
-  { color: '#283593', title: 'Finance', info: '', text: '', idx: 3, link: '/CardDetails' },
-  { color: '#00838f', title: 'Education', text: '', idx: 4, link: '/CardDetails'},
+  { color: '#283593', title: 'Finance', info: '', text: '', idx: 3, link: '/Finance' },
+  { color: '#00838f', title: 'Education', text: '', idx: 4, link: '/Education'},
   { color: '#1565c0', title: 'Business', info: '', text: '', idx: 5, link: '/CardDetails'},
   { color: '#6495ED', title: 'Trade Work', info: '', text: '', idx: 6, link: '/CardDetails'},
   { color: '#283593', title: 'Engineering', info: '', text: '', idx: 7, link: '/Engineering'},
@@ -63,14 +63,14 @@ const HomePage = () => {
                 Never be affraid to reinvent yourself.
               </Typography>
               <div className={classes.heroButtons}>
-                <Grid container spacing={2} justify="center">
+                <Grid container spacing={10} justify="center">
                   <Grid item>
                     <Button variant="contained" color="primary">
                       Main call to action
                     </Button>
                   </Grid>
                   <Grid item>
-                    <Button variant="outlined" color="primary">
+                    <Button variant="contained" color="secondary" textAlign = "center">
                       Secondary action
                     </Button>
                   </Grid>
@@ -78,7 +78,6 @@ const HomePage = () => {
               </div>
             </Container>
         </div>
-
       <Grow in>
         <Grid className={classes.container} container alignItems="stretch" spacing={9}>
           {infoCards.map((infoCard) => (
