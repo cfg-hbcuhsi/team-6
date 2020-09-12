@@ -7,6 +7,8 @@ import Medicine from './components/Home/Medicine/MedicinePage';
 import Engineering from './components/Home/Engineering/EngineeringPage';
 import Finance from './components/Home/Finance/FinancePage';
 import Education from './components/Home/Education/EducationPage';
+import TradeWork from './components/Home/TradeWork/TradeWorkPage';
+import Law from './components/Home/Law/LawPage';
 import alanBtn from '@alan-ai/alan-sdk-web';
 
 function App() {
@@ -51,6 +53,14 @@ function App() {
 
         <Route exact path = '/Education'>
           <Education/>
+        </Route>
+
+        <Route exact path = '/TradeWork'>
+          <TradeWork/>
+        </Route>
+
+        <Route exact path = '/Law'>
+          <Law/>
         </Route>
 
       </Router>

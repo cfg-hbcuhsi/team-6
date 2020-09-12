@@ -14,13 +14,13 @@ import { Container } from 'react-layout-components';
 
 
 const infoCards = [
-  { color: '#00838f', title: 'Law', text: '', idx: 0, link: '/Home' },
+  { color: '#00838f', title: 'Law', text: '', idx: 0, link: '/Law' },
   { color: '#1565c0', title: 'Medicine', info: '', text: '', idx: 1, link: '/Medicine' },
   { color: '#6495ED', title: 'Technology', info: '', text: '', idx: 2, link: '/Technology'},
   { color: '#283593', title: 'Finance', info: '', text: '', idx: 3, link: '/Finance' },
   { color: '#00838f', title: 'Education', text: '', idx: 4, link: '/Education'},
   { color: '#1565c0', title: 'Business', info: '', text: '', idx: 5, link: '/CardDetails'},
-  { color: '#6495ED', title: 'Trade Work', info: '', text: '', idx: 6, link: '/CardDetails'},
+  { color: '#6495ED', title: 'Trade Work', info: '', text: '', idx: 6, link: '/TradeWork'},
   { color: '#283593', title: 'Engineering', info: '', text: '', idx: 7, link: '/Engineering'},
 ];
 
