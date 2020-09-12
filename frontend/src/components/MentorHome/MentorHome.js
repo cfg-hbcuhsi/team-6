@@ -12,15 +12,21 @@ import Radio from "@material-ui/core/Radio";
 import axios from 'axios'
 import { Redirect } from 'react-router';
 import cookie from 'react-cookies';
+import Toolbar from '@material-ui/core/Toolbar';
+import AppBar from '@material-ui/core/AppBar';
+import { Link as RouterLink } from 'react-router-dom'
+import useStyles from '../Home/styles';
+import NavBar from '../NavBar/NavBar'
 
-class Login extends Component {
+class MentorHome extends Component {
     constructor(props) {
         super(props);
 
         this.state = {
             email: "",
-            password: "",
-            role: "",
+            majors:"",
+            phoneNumber:"",
+            avatar:"",
             authFlag: false,
             error: ''
         };
@@ -33,55 +39,44 @@ class Login extends Component {
         });
     };
 
-    handleSubmit = e => {
-        e.preventDefault();
-        console.log(this.state)
+    // handleSubmit = e => {
+    //     e.preventDefault();
+    //     console.log(this.state)
 
-        const { email, password } = this.state;
-        const formInfo = {
-            email, password
-        };
+        
+        
+    //     axios
+    //         .post('http://localhost:3001/mentorhome', formInfo)
+    //         .then((response) => {
 
-        axios
-            .post('http://localhost:3001/login', formInfo)
-            .then((response) => {
+    //             console.log('Data: ', response.data)
+    //             if (response.status == 200) {
+    //                 if (response.data == "Success") {
+    //                     console.log("Succesfull")
+    //                     this.setState({
+    //                         authFlag: true
+    //                     })
+    //                     sessionStorage.setItem('authFlag', 'true')
+    //                 }
+    //                 else {
+    //                     alert("Email ID already exists. Please try with new email Id.")
+    //                 }
+    //             }
+    //             else {
+    //                 this.setState({
+    //                     authFlag: false,
+    //                     error: 'Please try again'
+    //                 })
+    //                 console.log(this.state.error)
+    //             }
+    //         })
+    //         .catch(console.log);
+    // };
 
-                console.log('Data: ', response.data)
-                if (response.status == 200) {
-                    if (response.data == "Success") {
-                        console.log("Succesfull")
-                        this.setState({
-                            authFlag: true
-                        })
-                        sessionStorage.setItem('authFlag','true')
-                        sessionStorage.setItem('email',email)
-                    }
-                    else {
-                        alert("Email ID already exists. Please try with new email Id.")
-                    }
-                }
-                else {
-                    this.setState({
-                        authFlag: false,
-                        error: 'Please try again'
-                    })
-                    console.log(this.state.error)
-                }
-            })
-            .catch(console.log);
-    };
-
-    render() {
-        let redirectVar = null;
-        if (this.state.authFlag) {
-            redirectVar = <Redirect to="/home" />
-        }
-        else {
-            redirectVar = <Redirect to="/login" />
-        }
+    render() {        
         return (
             <div>
-                {redirectVar}
+                <NavBar/>
                 <Grid
                     container
                     spacing={0}
@@ -92,17 +87,17 @@ class Login extends Component {
                 >
 
                     <Grid item xs={3}>
-                        <Paper style={{ width: 300, height: 225, padding: 10 }}>
+                        <Paper style={{ width: 400, height: 300, padding: 10 }}>
 
-                            <Typography variant="h4" align="center" color="primary" gutterBottom>Login</Typography>
+                            <Typography variant="h4" align="center" color="primary" gutterBottom>Create Your Profile</Typography>
                             <div className="container" style={{ width: "80%", margin: "0 auto" }}>
                                 <form onSubmit={this.handleSubmit}>
 
                                     <TextField
                                         fullWidth={true}
-                                        required label={"Email"}
-                                        name={"email"}
-                                        value={this.state.email}
+                                        required label={"Provide your interested field to advise"}
+                                        name={"majors"}
+                                        value={this.state.majors}
                                         type={"text"}
                                         onChange={this.handleInputChange}
                                         id="input-with-icon-adornment"
@@ -114,11 +109,10 @@ class Login extends Component {
 
                                     <TextField
                                         fullWidth={true}
-                                        required
-                                        label={"Password"}
-                                        name={"password"}
-                                        value={this.state.password}
-                                        type={"password"}
+                                        required label={"Please provide best number to reach you"}
+                                        name={"email"}
+                                        value={this.state.phoneNumber}
+                                        type={"text"}
                                         onChange={this.handleInputChange}
                                         id="input-with-icon-adornment"
                                         startAdornment={
@@ -126,6 +120,21 @@ class Login extends Component {
                                             </InputAdornment>
                                         }
                                     />
+
+                                    <Grid container justify="center" style={{ marginTop: '20px' }}>
+                                        <Button
+                                            variant="contained"
+                                            component="label"
+
+                                        >
+                                            Upload Photo
+                                        <input
+                                                type="file"
+                                                name="avatar"
+                                                style={{ display: "none" }}
+                                            />
+                                        </Button>
+                                    </Grid>
 
                                     <Grid container justify="center" style={{ marginTop: '20px' }}>
                                         <Button variant="outlined" color="primary" style={{ textTransform: "none" }}
@@ -143,5 +152,5 @@ class Login extends Component {
 }
 
 
-export default Login;
+export default MentorHome;
 

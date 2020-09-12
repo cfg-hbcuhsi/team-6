@@ -6,6 +6,7 @@ import Home from './Home/HomePage'
 import Technology from './Home/Technology/TechnologyPage';
 import Medicine from './Home/Medicine/MedicinePage';
 import Engineering from './Home/Engineering/EngineeringPage';
+import MentorHome from './MentorHome/MentorHome';
 
 
 class Main extends Component {
@@ -19,7 +20,7 @@ class Main extends Component {
                 <Route path="/medicine" component={Medicine}/>                    
                 <Route path="/technology" component={Technology}/>                    
                 <Route path="/engineering" component={Engineering}/>                    
-                
+                <Route path="/mentorhome" component={MentorHome}/>    
             </div>
         )
     }
