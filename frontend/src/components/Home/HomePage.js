@@ -20,7 +20,7 @@ const infoCards = [
   { color: '#00838f', title: 'Education', text: '', idx: 4, link: '/CardDetails'},
   { color: '#1565c0', title: 'Business', info: '', text: '', idx: 5, link: '/CardDetails'},
   { color: '#6495ED', title: 'Trade Work', info: '', text: '', idx: 6, link: '/CardDetails'},
-  { color: '#283593', title: 'Engineering', info: '', text: '', idx: 7, link: '/CardDetails'},
+  { color: '#283593', title: 'Engineering', info: '', text: '', idx: 7, link: '/Engineering'},
 ];
 
 let arr = ['https://cdn.britannica.com/51/190451-050-0E9B50F5/soundblock-Wood-scales-books-stack-background-leather.jpg', 
@@ -52,6 +52,7 @@ const NewsCards = () => {
           </Button>
         </Toolbar>
       </AppBar>
+
 
       <Grow in>
         <Grid className={classes.container} container alignItems="stretch" spacing={9}>
