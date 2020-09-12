@@ -11,6 +11,9 @@ import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Radio from "@material-ui/core/Radio";
 import axios from 'axios'
 import { Redirect } from 'react-router';
+import Dialog from "@material-ui/core/Dialog";
+import DialogTitle from "@material-ui/core/DialogTitle";
+import DialogActions from "@material-ui/core/DialogActions";
 
 
 class SignUp extends Component {
@@ -79,12 +82,16 @@ class SignUp extends Component {
             redirectVar = <Redirect to="/" />
         }
         return (
-            <Paper style={{ width: 300, padding: 10 }}>
-                {redirectVar}
-                <Typography variant="h4" color="primary" gutterBottom>Sign Up</Typography>
-                <div className="container" style={{ width: "80%", margin: "0 auto" }}>
-                    <form onSubmit={this.handleSubmit}>
+            <Dialog open={this.props.open} onClose={this.props.handleClose} style={{padding:20}} aria-labelledby="form-dialog-title">
+            {redirectVar}
+                <DialogTitle
+                    disableTypography
+                    id="alert-dialog-title"
+                >
+                    <Typography variant="h4" color="primary">Sign Up</Typography>
 
+                </DialogTitle>
+                <div className="container" style={{ width: "80%", margin: "0 auto" }}>
                         <TextField
                             fullWidth={true}
                             required
@@ -154,13 +161,16 @@ class SignUp extends Component {
                             </FormControl>
                         </div>
 
-                        <Grid container justify="center" style={{ marginTop: '10px' }}>
-                            <Button variant="outlined" color="primary" style={{ textTransform: "none" }}
-                                type={"submit"}>Submit</Button>
-                        </Grid>
-                    </form>
+                            <DialogActions>
+                                <Button onClick={this.props.handleClose} color="primary">
+                                    Cancel
+                                </Button>
+                                <Button onClick={this.handleSubmit} color="primary" type={"submit"}>
+                                    Submit
+                                </Button>
+                            </DialogActions>
                 </div>
-            </Paper>
+            </Dialog>
         );
     }
 }

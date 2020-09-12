@@ -10,6 +10,7 @@ import AppBar from '@material-ui/core/AppBar';
 import Button from '@material-ui/core/Button';
 import makeStyles from './styles.js';
 import { Container } from 'react-layout-components';
+import SignUp from "../SignUp";
 
 
 
@@ -24,9 +25,9 @@ const infoCards = [
   { color: '#283593', title: 'Engineering', info: '', text: '', idx: 7, link: '/Engineering'},
 ];
 
-let arr = ['https://cdn.britannica.com/51/190451-050-0E9B50F5/soundblock-Wood-scales-books-stack-background-leather.jpg', 
-'https://img.freepik.com/free-vector/abstract-health-medical-science-healthcare-icon_36402-277.jpg?size=626&ext=jpg', 
-'https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80', 
+let arr = ['https://cdn.britannica.com/51/190451-050-0E9B50F5/soundblock-Wood-scales-books-stack-background-leather.jpg',
+'https://img.freepik.com/free-vector/abstract-health-medical-science-healthcare-icon_36402-277.jpg?size=626&ext=jpg',
+'https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80',
 'https://cdn.hipwallpaper.com/i/87/59/yaQMpF.jpg',
 'https://giveme-5.org/wp-content/uploads/2019/11/modern-education-system.jpg',
 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80',
@@ -38,15 +39,17 @@ let arr = ['https://cdn.britannica.com/51/190451-050-0E9B50F5/soundblock-Wood-sc
 
 const HomePage = () => {
   const classes = makeStyles();
+  const [open, setOpen] = React.useState(false);
 
     return (
       <div className={classes.appbar}>
         <AppBar position="relative" >
         <Toolbar>
         <img src='https://i.imgur.com/xTtRCf4.png' className={classes.easypicmini}/>
-          <Button >
-            Sign In.
+          <Button variant="text" onClick={() => setOpen(true)}>
+            Sign Up
           </Button>
+          <SignUp open={open} handleClose={() => setOpen(false)}/>
         </Toolbar>
       </AppBar>
       <img src='https://i.imgur.com/xTtRCf4.png' className={classes.easypic}/>
@@ -84,7 +87,7 @@ const HomePage = () => {
             <Grid item xs={12} sm={6} md={4} lg={3} className={classes.infoCard} key = {infoCard.title}>
               <AnimationWrapper>
                 <Typography className={classes.tex} color="inherit">
-                      {infoCard.title}      
+                      {infoCard.title}
                 </Typography>
                 <div className={classes.card} style={{ backgroundColor: infoCard.color }}>
                 <Link underline='none' component={RouterLink} to={infoCard.link}>
